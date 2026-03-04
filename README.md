@@ -91,6 +91,8 @@
 * 补充反向代理配置。
 *(注：1panel 和宝塔的反向代理配置信息可能不同，请根据实际情况灵活配置)*
 
+[补充反向代理配置信息]([https://github.com/qukuan/1panel-dujiao-next](https://github.com/qukuan/1panel-dujiao-next/tree/main/nginx)) 
+
 ### 6. 端口放行
 
 点击宝塔菜单：**安全**，添加放行以下端口：
@@ -178,3 +180,4 @@ docker compose --env-file .env -f docker-compose.postgres.yml up -d
 登录后台后，**立刻更改弱密码（默认密码）**！
 
 本篇教程是宝塔+Docker部署，后续更新版本也会非常方便。快去享受你的新版独角吧！
+
