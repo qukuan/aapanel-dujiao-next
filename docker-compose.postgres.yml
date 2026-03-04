@@ -1,0 +1,63 @@
+services:
+  api:
+    image: dujiaonext/api:${TAG}
+    container_name: dujiaonext-api
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      DJ_DEFAULT_ADMIN_USERNAME: ${DJ_DEFAULT_ADMIN_USERNAME}
+      DJ_DEFAULT_ADMIN_PASSWORD: ${DJ_DEFAULT_ADMIN_PASSWORD}
+    ports:
+      - "127.0.0.1:${API_PORT}:8080"  
+    #ports:
+      #- "${API_PORT}:8080"
+    volumes:
+      - ./config/config.yml:/app/config.yml:ro
+      - ./data/uploads:/app/uploads
+      - ./data/logs:/app/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    networks:
+      - dujiao-net
+      #- 1panel-network
+
+  user:
+    image: dujiaonext/user:${TAG}
+    container_name: dujiaonext-user
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+    ports:
+      - "127.0.0.1:${USER_PORT}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - dujiao-net
+      #- 1panel-network
+
+  admin:
+    image: dujiaonext/admin:${TAG}
+    container_name: dujiaonext-admin
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+    ports:
+      - "127.0.0.1:${ADMIN_PORT}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - dujiao-net
+      #- 1panel-network
+
+networks:
+  dujiao-net:
+    driver: bridge
+  #1panel-network:      # 1panel容器网络
+    #external: true
