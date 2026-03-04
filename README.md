@@ -6,6 +6,14 @@
 
 ---
 
+#### 📷 视频教程（保姆级）一看就会
+
+[![Bilibili](https://img.shields.io/badge/Bilibili-国内网点击观看blibli视频教程-blue?style=for-the-badge&logo=bilibili)](https://b23.tv/gcUkVec)
+
+国外网络高清教程视频：[![YouTube Video](https://youtu.be/741xESqsA7s?si=Td9cNQZoBZs1QlE9)
+
+---
+
 ## 📌 准备工作与参考链接
 
 *   **服务器 (VPS)**：推荐使用 Ubuntu 24.04 系统。
@@ -180,5 +188,6 @@ docker compose --env-file .env -f docker-compose.postgres.yml up -d
 登录后台后，**立刻更改弱密码（默认密码）**！
 
 本篇教程是宝塔+Docker部署，后续更新版本也会非常方便。快去享受你的新版独角吧！
+
 
 
