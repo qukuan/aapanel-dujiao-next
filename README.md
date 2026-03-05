@@ -4,6 +4,11 @@
 
 相比于社区文档中使用 aaPanel 手动下载编译好的二进制文件部署，本篇采用的 **宝塔+Docker部署** 方案，在后续的版本更新维护上会更加方便快捷。
 
+#### 注意⚠️
+**本篇是宝塔Docker部署教程，和1Panel有所不同！请不要弄混了docker-compose.postgres.yml和config.yml文件！**
+
+**1Panel面板部署教程仓库在：[![GitHub Repo](https://img.shields.io/github/repo-size/qukuan/1panel-dujiao-next?logo=github&label=Repo)](https://github.com/qukuan/1panel-dujiao-next)
+
 ---
 
 #### 📷 视频教程（保姆级）一看就会
