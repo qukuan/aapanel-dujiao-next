@@ -7,7 +7,7 @@
 #### 注意⚠️
 本篇是宝塔Docker部署教程，和1Panel有所不同！请不要弄混了docker-compose.postgres.yml和config.yml文件！
 
-1Panel面板部署教程仓库在：[![GitHub 1Panel部署Dujiao-Next](https://img.shields.io/github/repo-size/qukuan/1panel-dujiao-next?logo=github&label=Repo)](https://github.com/qukuan/1panel-dujiao-next)
+1Panel面板部署教程仓库在：[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&style=for-the-badge)](https://github.com/qukuan/aapanel-dujiao-next)
 
 ---
 
