@@ -194,6 +194,28 @@ docker compose --env-file .env -f docker-compose.postgres.yml up -d
 
 本篇教程是宝塔+Docker部署，后续更新版本也会非常方便。快去享受你的新版独角吧！
 
+---
+
+### 版本有更新🆕
+1. 先暂停容器（避免你正在更新而刚好有客户下单，这种几率的出现）
+```
+docker compose --env-file .env -f docker-compose.postgres.yml down
+```
+
+2. 拉取官方最新版本镜像
+```
+docker compose -f docker-compose.postgres.yml pull
+```
+
+3. 重启容器完成更新
+```
+docker compose --env-file .env -f docker-compose.postgres.yml up -d
+```
+
+
+只要不是重大更新，例如数据库结构，只需要正常按照1-2-3步骤执行命令即可，有重大更新官方那边也会有公告和提示。
+
+
 
 
 
