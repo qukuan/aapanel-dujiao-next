@@ -213,11 +213,10 @@ docker compose --env-file .env -f docker-compose.postgres.yml up -d
 ```
 
 ## ✈️Telegram Bot推荐（自动机器人）
-- 自动开通Telegram会员 @apivipbot （可提供源码）
-- 自动租用Tron波场能量、查询工具 @Gas_EnergyBot （可提供源码）
+- 自动开通Telegram会员 @apipremiumbot （可提供源码）
+- 自动租用Tron波场能量、查询工具 @TRXrentEnergyBot （可提供源码）
 
-
-只要不是重大更新，例如数据库结构，只需要正常按照1-2-3步骤执行命令即可，有重大更新官方那边也会有公告和提示。
+- 只要不是重大更新，例如数据库结构，只需要正常按照1-2-3步骤执行命令即可，有重大更新官方那边也会有公告和提示。
 
 
 
